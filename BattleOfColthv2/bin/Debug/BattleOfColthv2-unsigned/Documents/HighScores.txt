@@ -1,0 +1,5 @@
+DJM|10
+FHN|7
+FKE|7
+AAA|5
+BBB|4

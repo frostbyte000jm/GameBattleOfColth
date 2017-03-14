@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{408D04C5-ABA3-4243-89C9-2BF556185D8B}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BattleOfColthv2</RootNamespace>
+    <AssemblyName>BattleOfColthv2</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="Sprite.cs" />
+    <Compile Include="PlayerShip.cs" />
+    <Compile Include="BackGround.cs" />
+    <Compile Include="PowerStation.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="FighterShip.cs" />
+    <Compile Include="Weapon.cs" />
+    <Compile Include="Guns.cs" />
+    <Compile Include="Projectile.cs" />
+    <Compile Include="MotherShip.cs" />
+    <Compile Include="Missle.cs" />
+    <Compile Include="DropOff.cs" />
+    <Compile Include="Guardian.cs" />
+    <Compile Include="TopScoreHUD.cs" />
+    <Compile Include="HUD.cs" />
+    <Compile Include="Score.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\Sprite.fcg" />
+    <ShaderProgram Include="shaders\Sprite.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="Assets\Background.png" />
+    <Content Include="Assets\BoomStick.png" />
+    <Content Include="Assets\bullet.png" />
+    <Content Include="Assets\DropOff.png" />
+    <Content Include="Assets\FighterShip.png" />
+    <Content Include="Assets\Guardian.png" />
+    <Content Include="Assets\missile.png" />
+    <Content Include="Assets\MotherShip.png" />
+    <Content Include="Assets\Player Ship.png" />
+    <Content Include="Assets\PowerStation.png" />
+    <Content Include="Assets\Gun.png" />
+    <Content Include="Assets\DropBox.png" />
+    <Content Include="Assets\MissleGun.png" />
+    <Content Include="Assets\Menu.png" />
+    <Content Include="Assets\Menu.mp3" />
+    <Content Include="Assets\GameOver.mp3" />
+    <Content Include="Assets\HighScore.mp3" />
+    <Content Include="Assets\MainPlay.mp3" />
+    <Content Include="Assets\DropBomb.wav" />
+    <Content Include="Assets\Missle.wav" />
+    <Content Include="Assets\Bullet.wav" />
+    <Content Include="Assets\Credits.png" />
+    <Content Include="Assets\GameOver.png" />
+    <Content Include="Assets\HighScore.png" />
+    <Content Include="Assets\Instructions.png" />
+    <Content Include="Assets\Paused.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Thumbs.db" />
+  </ItemGroup>
+</Project>
